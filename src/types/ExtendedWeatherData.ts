@@ -1,5 +1,10 @@
 import { WeatherData } from "../types";
 
+export interface ParkImage {
+    name: string;
+    url: string;
+}
+
 export type ExtendedWeatherData = WeatherData & {
     current: {
         temperature: number;

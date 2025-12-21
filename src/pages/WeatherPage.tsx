@@ -184,7 +184,7 @@ const WeatherPage: React.FC = () => {
                         <strong>{date}</strong>: {day.mintemp}° / {day.maxtemp}° F
                 </div>
         ))}
-        {weather && <WeatherChart weatherData={weather} />}
+        {weather && <WeatherChart weather={weather} />}
         </div>
         )}
         <CampingRecommendation

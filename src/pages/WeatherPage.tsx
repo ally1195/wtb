@@ -56,7 +56,7 @@ const WeatherPage: React.FC = () => {
 
       try {
         const currentRes = await fetch(
-          `http://api.weatherstack.com/current?access_key=${apiKey}&query=${encodeURIComponent(
+          `https://api.weatherstack.com/current?access_key=${apiKey}&query=${encodeURIComponent(
             location
           )}`
         )
@@ -69,7 +69,7 @@ const WeatherPage: React.FC = () => {
             date.setDate(date.getDate() - 5)
             const historicalDate = date.toISOString().split('T')[0]
 
-            const histRes = await fetch( `http://api.weatherstack.com/historical?access_key=${apiKey}&query=${encodeURIComponent(
+            const histRes = await fetch( `https://api.weatherstack.com/historical?access_key=${apiKey}&query=${encodeURIComponent(
             location
           )}&historical_date=${historicalDate}`
         )

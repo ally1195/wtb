@@ -18,6 +18,11 @@ Description of the project:
     Chart.js
     Swiper.js
 
+    Fetch Calls:
+    Weatherstack - current
+    Weatherstack - historical
+    National Parks Service - parks
+
     What this application does:
         First, it takes a user input for a specific city and state and searches different weather metrics such as wind speed or temperature. From there, the application will search through weatherstack's current and historic api endpoints to gather weather data for the user. The weather data will be displayed for the user to read and understand. Once the data is pulled from the api and displayed, there are different cards for the user to read. The initial card will be a camping preferences card that allows the user to adjust different metrics that would affect the comfort and safety analysis score. These scores dynamically change as the metrics change from the user and is compared to the weather data.
 

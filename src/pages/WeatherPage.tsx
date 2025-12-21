@@ -180,7 +180,7 @@ const WeatherPage: React.FC = () => {
                 <h3> Historical Comparison (5 days ago)</h3>
                 {Object.entries(weather.historical).map(([date, day]: any) => (
                     <div key={date}>
-                        <strong>{date}</strong>: {day.mintemp}° / {day.maxtemp}° F
+                        <strong>On this date: {date}</strong> - it was {day.mintemp}° / {day.maxtemp}° F lower/higher
                 </div>
         ))}
         {weather && <WeatherChart weather={weather} />}

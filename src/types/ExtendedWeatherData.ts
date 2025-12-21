@@ -16,6 +16,6 @@ export type ExtendedWeatherData = WeatherData & {
         region: string;
     }
     historical?: Record<string, any> | null;
-    parkImages?: { name: string; url: string }[];
+    parkImages?: ParkImage[];
 }
 

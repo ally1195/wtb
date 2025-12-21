@@ -22,7 +22,6 @@ const WeatherPage: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [statusMessage, setStatusMessage] = useState<string>('')
-  const [parks, setParks] = useState<{ name: String; url: string } []>([]);
 
    const [comfortPreferences, setComfortPreferences] = useState({
     minTempF: 50,
@@ -203,7 +202,7 @@ const WeatherPage: React.FC = () => {
                 pagination={{ clickable: true }}
                 style={{ padding: '1rem 0' }}
                 >
-                {weather.parkImages.map((park, index) => (
+                {weather.parkImages?.map((park: { name: string; url: string }, index:number) => (
                         <SwiperSlide key={index} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                         <img
                             src={park.url}

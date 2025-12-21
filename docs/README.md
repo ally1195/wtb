@@ -1,6 +1,5 @@
 # Title: Weather The Better
 
-Tophalf of ReadMe:
 
 ## Description of the project
 
@@ -45,6 +44,68 @@ The goal of this application, is to be a useful tool that provides useful weathe
 
 ## Developer Manual
 
+### How to install the application and all dependencies:
 
-For future developers:
-This still requires alot of work for the historical aspect of it but logically everything works and is connected with each other. 
+1. Make sure you are in the root directory
+2. Run `npm i` or `npm install` to grab the dependencies from the [package.json]
+
+### How to run any tests you have written for your software
+
+No unit tests were written for this project. But if a developer did want to create tests, even better! [Jest](https://jestjs.io/) is a power testing framework for Javascript and would work well for this application.
+
+### The API for your server application - all GET, POST, PATCH, etc endpoints, and what they each do
+
+- Call: Weatherstack - current
+
+  - Type of Request: Get Request
+  - Endpoint: `https://api.weatherstack.com/current?access_key=${apiKey}&query=${encodeURIComponent(location)}`
+
+    - Parameters
+
+      - access_key: Api Access Key
+      - query: param to pass a single location to the API
+
+    - link to endpoint in codebase: [here](../src/pages/WeatherPage.tsx#L58)
+
+  - What does it do: The endpoint will query the weatherstack API for real-time weather data in a location of your choice
+
+- Call: Weatherstack - historical
+
+  - Type of Request: Get Request
+  - Endpoint: `https://api.weatherstack.com/historical?access_key=${apiKey}&query=${encodeURIComponent(
+  location
+)}&historical_date=${historicalDate}`
+  - link to endpoint in codebase: [here](../src/pages/WeatherPage.tsx#L72)
+  - Parameters
+
+    - access_key: Api Access Key
+    - query: param to pass a single location to the API
+    - historical_date: pass one historical date or multiple semicolon-separated dates to the API
+
+  - What does it do: This endpoint will look up historical weather data all the way back to 2015, simply pass one date of your choice (later than July 2008) or multiple semicolon-separated dates.
+
+- Call: National Parks Service - parks
+
+  - Type of Request: Get Request
+  - Endpoint: `https://developer.nps.gov/api/v1/parks?q=${encodeURIComponent(location)}&api_key=${npsKey}`
+  - link to endpoint in codebase: [here](../src/pages/WeatherPage.tsx#L83)
+    - Parameters:
+      - q: param to pass a single location to the API
+      - api_Key: Api Access Key
+  - What does it do: Pulls park images data
+
+  ## Known Bugs + Future Development
+
+  ### Known Bugs
+
+  1. Camping preferences are not completely aligned with the comfort and safety analysis. While they are working and functional, they can be advanced for better recommendations.
+
+  2. Park images have to adjusted to fit in one exact css container.
+
+  ### Future Development
+
+  1. Right now, the appliction only supports cities and state by their full name. It cannot support the acronym of the state (ex: MD)
+
+  2. Right now the historical endpoint only pulls the minimum and the maximum tempertures from five days ago, as a developer, it would better if we had more historical data pulled from the api since that would be more useful to the user. This was created to be expanded upon and set in place for now to show the fetch call has been made and completed. 
+
+  3. Improve UX/UI with better css. 

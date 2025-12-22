@@ -32,7 +32,7 @@ First, it takes a user input for a specific city and state and searches differen
 
 Once a city is search, and camping preferences have been placed, a comfort and safety analysis score is made. Using both the comfort and safety analysis scores along with the user's camping preferences, a camping recommendation is provided.
 
-To help campers decide which city is the best to camp in, there is a chart that compares the last five searches as each search is saved in a supabase database.
+To help campers decide which city is the best to camp in, there is a chart that compares the last five searches as each search is saved in a supabase database as long as the entries are being saved with the "save weather preferences" button.
 
 Lastly to make it more fun, At the bottom of the page, the national parks service api is linked to the state/region being search. So after the (city, state) has been searched, there will be a photo carousal of five national parks found in the state.
 

@@ -1,6 +1,5 @@
 # Title: Weather The Better
 
-
 ## Description of the project
 
 This is a camping web application to help spontaneous campers quickly decide if the weather conditions are comfortable enough to their likings. This web application was made by campers for campers!
@@ -106,6 +105,15 @@ No unit tests were written for this project. But if a developer did want to crea
 
   1. Right now, the appliction only supports cities and state by their full name. It cannot support the acronym of the state (ex: MD)
 
-  2. Right now the historical endpoint only pulls the minimum and the maximum tempertures from five days ago, as a developer, it would better if we had more historical data pulled from the api since that would be more useful to the user. This was created to be expanded upon and set in place for now to show the fetch call has been made and completed. 
+  2. Right now the historical endpoint only pulls the minimum and the maximum tempertures from five days ago, as a developer, it would better if we had more historical data pulled from the api since that would be more useful to the user. This was created to be expanded upon and set in place for now to show the fetch call has been made and completed.
 
-  3. Improve UX/UI with better css. 
+  3. Improve UX/UI with better css.
+
+Page | screenshot
+--- | ---
+Homepage |![Homepage](./HomePage.png)
+About Page |![AboutPage](./AboutPage.png)
+Camping preferences and Comfort Analysis |![CampingPref_ComftAna](./CampingPref_ComfortAna.png)
+Safety Analysis and Historical Comparison | ![SafetyAna_HistorComp](./SafeAna_Hist.png)
+Supabase with weather search inputs shown on the chart | ![Supabase](./Supabase.png)
+Camping Rec. w/ National Parks found in the state with save buttons to database | ![alt text](./CampRec_parks.png)

@@ -171,3 +171,10 @@ body {
     margin-top: 1rem;
     font-weight: 600;
 }
+
+.analysis-row {
+    display: flex;
+    justify-content: space-between;
+    gap:0.75rem;
+    margin-bottom:0.5rem;
+}

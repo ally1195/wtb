@@ -39,6 +39,8 @@ const WeatherPage: React.FC = () => {
     maxWindMph: 15,
   });
 
+  const cToF = (c: number) => (c * 1.8 + 32).toFixed(1);
+
 
   const apiKey = import.meta.env.VITE_WEATHERSTACK_KEY;
   const npsKey = import.meta.env.VITE_NPS_KEY;
@@ -186,7 +188,7 @@ const WeatherPage: React.FC = () => {
                 <h3> Historical Comparison (5 days ago)</h3>
                 {Object.entries(weather.historical).map(([date, day]: any) => (
                     <div key={date}>
-                        <strong>On this date: {date}</strong> - it was {day.mintemp}° / {day.maxtemp}° F lower/higher
+                        <strong>On this date: {date}</strong> - it was {cToF(day.mintemp)}° / {cToF(day.maxtemp)}° F lower/higher
                 </div>
         ))}
         {weather && <WeatherChart weather={weather} />}

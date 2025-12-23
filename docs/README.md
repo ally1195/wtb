@@ -113,7 +113,8 @@ Page | screenshot
 --- | ---
 Homepage |![Homepage](./HomePage.png)
 About Page |![AboutPage](./AboutPage.png)
-Camping preferences and Comfort Analysis |![CampingPref_ComftAna](./CampingPref_ComfortAna.png)
-Safety Analysis and Historical Comparison | ![SafetyAna_HistorComp](./SafeAna_Hist.png)
+Search City and input Camping preferences|![SearchCity w pref](SearchCity_w_pref.png)
+Current Weather, Comfort Analysis, Safety Analysis|![CurWeatherComfAnaSafAna](CurWeatherComfAnaSafAna.png)
 Supabase with weather search inputs shown on the chart | ![Supabase](./Supabase.png)
+Historical Data being pulled with past five weather searches pulled from supabase displaying current temperatures for them. | ![alt text](Histcomp.png)
 Camping Rec. w/ National Parks found in the state with save buttons to database | ![alt text](./CampRec_parks.png)

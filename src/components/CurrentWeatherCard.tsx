@@ -12,19 +12,19 @@ const CurrentWeatherCard: React.FC<Props> = ({ weather, tempF }) => {
       <h3>Current Weather</h3>
 
       <div className="analysis-row">
-        <span>Location</span>
+        <span>Location: </span>
         <span>
-          {weather.location.name}, {weather.location.region}
+        {weather.location.name}, {weather.location.region}
         </span>
       </div>
 
       <div className="analysis-row">
-        <span>Temperature</span>
+        <span>Temperature: </span>
         <span>{tempF.toFixed(1)} °F</span>
       </div>
 
       <div className="analysis-row">
-        <span>Wind Speed</span>
+        <span>Wind Speed: </span>
         <span>
           {weather.current.wind_speed !== undefined
             ? `${weather.current.wind_speed} km/h`
@@ -33,7 +33,7 @@ const CurrentWeatherCard: React.FC<Props> = ({ weather, tempF }) => {
       </div>
 
       <div className="analysis-row">
-        <span>Humidity</span>
+        <span>Humidity: </span>
         <span>
           {weather.current.humidity !== undefined
             ? `${weather.current.humidity}%`

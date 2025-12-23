@@ -13,6 +13,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import WeatherChart from '../components/WeatherChart';
+import CurrentWeatherCard from '../components/CurrentWeatherCard';
 
 const WeatherPage: React.FC = () => {
   const [weather, setWeather] = useState<ExtendedWeatherData | null>(null);
@@ -161,6 +162,11 @@ const WeatherPage: React.FC = () => {
           setComfortPreferences={setComfortPreferences}
           safetyPreferences={safetyPreferences}
           setSafetyPreferences={setSafetyPreferences}
+        />
+
+        <CurrentWeatherCard
+          weather={weather}
+          tempF={tempF}
         />
 
         <ComfortAnalysis
